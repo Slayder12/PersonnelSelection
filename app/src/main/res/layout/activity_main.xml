@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/titleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Подбор персонала"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+
+            android:textSize="20sp"/>
+
+        <Spinner
+            android:id="@+id/toolbarRoleSP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:spinnerMode="dropdown"
+            />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/inputPad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarMain"
+        app:layout_constraintVertical_bias="0.03">
+
+        <TextView
+            android:id="@+id/nameTextTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Имя"
+            android:textSize="15sp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"/>
+
+        <EditText
+            android:id="@+id/firstNameET"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:background="@drawable/edittext_border"
+            android:textColor="@color/black"
+            android:hint="Введите Имя"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/lastNameTextTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Фамилия"
+            android:textSize="15sp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"/>
+
+        <EditText
+            android:id="@+id/lastNameET"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:background="@drawable/edittext_border"
+            android:textColor="@color/black"
+            android:hint="Введите фамилию"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/ageTextTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Возраст"
+            android:textSize="15sp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"/>
+
+        <EditText
+            android:id="@+id/ageET"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:background="@drawable/edittext_border"
+            android:textColor="@color/black"
+            android:hint="Введите возраст"
+            android:inputType="number"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/positionTextTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Должность"
+            android:textSize="15sp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"/>
+
+        <Spinner
+            android:id="@+id/roleSP"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:background="@drawable/edittext_border"
+            android:textColor="@color/black"
+            android:textAlignment="center"/>
+
+        <Button
+            android:id="@+id/saveBTN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Сохранить"
+            android:textSize="18sp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginTop="10dp"
+            android:padding="12dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ListView
+            android:id="@+id/listViewLV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
